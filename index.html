@@ -395,11 +395,12 @@
     
     <script>
         document.getElementById('signup-form').addEventListener('submit', function(event) {
-            event.preventDefault();
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            alert(`Thank you for signing up, ${name}!`);
-            document.getElementById('signup-form').reset();
+            if (currentLang === 'en') {
+                alert("Thank you for signing up, ${name}! We'll let you know when the product is ready to launch.");
+            } else if (currentLang === 'zh') {
+                alert(`謝謝您報名, ${name}!產品推出時，我們會通知您`);
+            }
         });
     
         function changeLanguage(lang) {
