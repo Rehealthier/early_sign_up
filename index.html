@@ -44,8 +44,18 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            padding: 20px; /* Add padding inside the container */
+
         }
-        @media screen and (max-width: 430px) {
+
+        .responsive-video {
+            width: 100%; /* Full width */
+            max-width: 600px; /* Maximum width */
+            height: auto; /* Maintain aspect ratio */
+            margin: 20px 0; /* Add some spacing above and below */
+        }
+
+        @media screen and (max-width: 440px) {
             body {
                 height: auto;
                 padding: 40px 0; /* Increased top padding to accommodate language selector */
@@ -332,8 +342,17 @@
                 <li>Benefit from personalized exercise plans and difficulty adjustments tailored to your progress.</li>
                 <p><strong>Track Your Journey:</strong></p>
                 <li>Monitor your progress with visual reports that showcase your improvements over time.</li>
-            </ul>
-            <p class="animation">Experience the Future of Rehab with AI.</p>
+
+
+           
+        </ul>             
+        <video class="responsive-video" controls>
+            <source src="Re-Healthier_simple_intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <p class="animation">Experience the Future of Rehab with AI.</p>
+
         </div>
         <div class="right">
             <div class="language-selector">
