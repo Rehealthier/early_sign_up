@@ -396,11 +396,13 @@
     <script>
         document.getElementById('signup-form').addEventListener('submit', function(event) {
             const name = document.getElementById('name').value;
+            // Show the alert
             if (currentLang === 'en') {
-                alert("Thank you for signing up, ${name}! We'll let you know when the product is ready to launch.");
+                alert(`Thank you for signing up, ${name}! We'll let you know when the product is ready to launch.`);
             } else if (currentLang === 'zh') {
                 alert(`謝謝您報名, ${name}!產品推出時，我們會通知您`);
             }
+            // Allow the form to submit naturally
         });
     
         function changeLanguage(lang) {
