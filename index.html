@@ -394,18 +394,24 @@
     </div>
     
     <script>
+        let currentLang = 'en'; // Add this at the start of your script
+
         document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default temporarily to show alert
             const name = document.getElementById('name').value;
-            // Show the alert
+            
             if (currentLang === 'en') {
                 alert(`Thank you for signing up, ${name}! We'll let you know when the product is ready to launch.`);
             } else if (currentLang === 'zh') {
                 alert(`謝謝您報名, ${name}!產品推出時，我們會通知您`);
             }
-            // Allow the form to submit naturally
+            
+            // Submit the form programmatically after alert
+            event.target.submit();
         });
     
         function changeLanguage(lang) {
+            currentLang = lang; // Update this line to properly set the language
             if (lang === 'en') {
                 document.querySelector('.left h1').innerText = 'What Re-Healthier Offer?';
                 document.querySelector('.right h1').innerText = 'Join The Early Access List';
